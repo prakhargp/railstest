@@ -5,6 +5,8 @@ def initialize(x,y)
 end
   def moves(value)
     puts "This vehicle moves #{value}"
+    puts "This vehicle has #{@no_of_tyres} tyres"
+    puts "This vehicle has #{@total_seat_count} seats"
   end
 end
 
@@ -22,8 +24,8 @@ class Bike < Vehicle
   end
 end
 
-vehicle_obj = Vehicle.new(2,2)
-car_obj = Car.new(2,2)
+
+car_obj = Car.new(4,5)
 car_obj.moves
 bike_obj = Bike.new(2,2)
 bike_obj.moves
