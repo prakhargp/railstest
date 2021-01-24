@@ -39,10 +39,16 @@ class Students
             break
         end
     end
+    def add_percentage_to_hash
+        @@arr.each do |hash|
+            hash[:percentage] = "#{hash[:marks]}%"
+        end
+    end
 end
 
 new_student = Students.new
-puts new_student.student_details("harshit", 24, 20)
+puts new_student.student_details("harshit", 24, 40)
+puts new_student.student_details("Dinesh", 25, 50)
 puts new_student.passorfail("harshit")
 puts new_student.grades_by_switch("harshit")
-
+puts new_student.add_percentage_to_hash
